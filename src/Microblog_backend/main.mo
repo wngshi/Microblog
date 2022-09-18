@@ -11,7 +11,7 @@ actor {
   };
 
   public type Microblog = actor {
-    follow: shared (Principal) -> async();                //添加关注对象
+    follow: shared (Principal) -> async();                // 添加关注对象
     follows: shared query () -> async[Principal];         //返回关注列表
     post: shared (Text) -> async();                       //发布新的消息
     posts: shared query (Time.Time) ->async[Message];     //返回所有发布的消息
